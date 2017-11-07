@@ -11,17 +11,15 @@ while($row = mysqli_fetch_assoc($query)){
 	$author = $row['author'];
 	$time = $row['time'];
 	$date = $row['date'];
-    if($id==$row_likes['id_mess'])
-    $like_Count = $row_likes['count'];
+
 	echo "
 	<div id='message'>
-    <p id='id' style=\"display:block;\">$id</p>
 	<b>$author</b> пишет:
 	<br>
 	$message
     <br>
     Отправлено в: <b>$time, $date</b>
-    <button class='likeButton'>Likes: $like_Count</button>
+    <button class='likeButton'>Likes: </button>
 	</div>";
 };
 
@@ -38,7 +36,7 @@ while($row = mysqli_fetch_assoc($query)){
      
      
      
-})*/
+})
     	var a = "<?php echo $id ?>";
     alert (a);
     $('.likeButton').click(function(event){
@@ -46,5 +44,5 @@ while($row = mysqli_fetch_assoc($query)){
         var elem = document.getElementById('message');
      alert (id);
         alert (elem);
-    });
+    });*/
 </script>
