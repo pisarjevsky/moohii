@@ -1,19 +1,15 @@
 $(function(){
-	var login = "";
-$('#win2').css("display","block");
-	//Послать сообщение
+
 	$('#btnSend').click(function(event){
-		var name = $('#txtName').val();
-		var msg = $('#txtMessage').val();
+		var author = $('#author').val();
+		var message = $('#txtMessage').val();
 		
 		$.ajax({
 				type:"POST",
 				url:"messageSave.php",
-				data: ({name:name, msg:msg}),
-				success:function(msg){
-					if(msg==1){
+				data: ({"message":message, "author":author,}),
+				success:function(message){
 						$('#txtMessage').val("");
-					}
 					$.ajax({
 						url:"show.php",
 						success:function(html){
@@ -22,18 +18,7 @@ $('#win2').css("display","block");
 					});
 				}
 			});
-        setInterval(showMess,10);
+        setInterval(showMess,10000);
 	});
-
     
-	
-	function showMess(){
-		$.ajax({
-			type:"POST",
-			url:"show.php",
-			success:function(html){
-				$('#messages').html(html);
-			}
-		});
-	}
 }); 
