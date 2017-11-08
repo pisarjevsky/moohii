@@ -1,5 +1,5 @@
 $(function(){
-
+setInterval(showMess,1000);
 	$('#btnSend').click(function(event){
 		var author = $('#author').val();
 		var message = $('#txtMessage').val();
@@ -14,13 +14,13 @@ $(function(){
 						url:"show.php",
 						success:function(html){
 							$('#messages').html(html);
-                            alert ("im");
+                         
 						}
 					});
 				}
 			});
 	});
-    setInterval(showMess,1000);
+    
 	function showMess(){
 		$.ajax({
 			type:"POST",
@@ -30,4 +30,6 @@ $(function(){
 			}
 		});
 	}
+    
+    
 }); 

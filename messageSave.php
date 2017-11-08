@@ -2,7 +2,7 @@
 require("conn.php");
 $message = $_POST['message'];
 $author = $_POST['author'];
-$date = date("d.m.y");
+$date = date("y.m.d");
 $time = date("H:i:s");  
 mysqli_query($conn,"INSERT INTO `mess`(`author`, `message`, `date`, `time`) VALUES ('$author','$message', '$date','$time')");
 //Защита от вредоносных символов

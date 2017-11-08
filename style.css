@@ -18,11 +18,16 @@
 	display: block;
 }
 #txtMessage{
-	width: 500px;
-	height: 150px;
+	width: 100%;
 }
-#message{
+.message{
 	padding: 10px 10px 10px 10px;
 	margin-top: 10px;
 	box-shadow: 0px 2px 3px black;
+}
+.liked{
+    background-color: red;
+}
+#btnSend{
+    width: 20%;
 }
