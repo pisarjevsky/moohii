@@ -11,9 +11,9 @@
         <h2 align='center'>Чат</h2>
         <div id="win2">
             <span>Назовитесь:</span><br>
-            <p><input type="text" class="form-control" name="author" id="author" placeholder="Автор"></p>
+            <p><input type="text" class="form-control" name="author" id="author" placeholder="Автор" required></p>
             <span>Введите сообщение:</span><br>
-            <textarea id="txtMessage" class="form-control"></textarea>
+            <textarea id="txtMessage" class="form-control" required></textarea>
             <br>
             <button id="btnSend" class="btn btn-info">Отправить</button>
             <hr>
