@@ -20,7 +20,7 @@
 	<div id="messages"></div>
       
 </div>
-        <?php require "show.php";?>
+       <!-- <?php require "show.php";?>-->
 </div>
     
 </body>
