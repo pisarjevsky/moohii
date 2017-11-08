@@ -14,11 +14,20 @@ $(function(){
 						url:"show.php",
 						success:function(html){
 							$('#messages').html(html);
+                            alert ("im");
 						}
 					});
 				}
 			});
-        setInterval(showMess,10000);
 	});
-    
+    setInterval(showMess,1000);
+	function showMess(){
+		$.ajax({
+			type:"POST",
+			url:"show.php",
+			success:function(html){
+				$('#messages').html(html);
+			}
+		});
+	}
 }); 
