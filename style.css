@@ -14,9 +14,7 @@
 #txtPass{
 	width: 180px;
 }
-#win2{
-	display: block;
-}
+
 #txtMessage{
 	width: 100%;
 }
@@ -29,5 +27,8 @@
     background-color: red;
 }
 #btnSend{
+    width: 20%;
+}
+#upload{
     width: 20%;
 }

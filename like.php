@@ -1,5 +1,5 @@
 <?php
-require("conn.php");
+require("db/conn.php");
 session_start();
 $messageId = $_POST['messageId'];
 if(!$_SESSION['likes'][$messageId]==1){
